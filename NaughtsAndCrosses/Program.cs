@@ -30,6 +30,27 @@ namespace NaughtsAndCrosses
                     char x = Convert.ToChar(input.Substring(0, 1));
                     char y = Convert.ToChar(input.Substring(1, 1));
                     AddToBoard(x, y, 'X');
+
+                    if (HasWon('X'))
+                    {
+                        won = true;
+                        Console.BackgroundColor = ConsoleColor.Magenta;
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Clear();
+                        DisplayBoard();
+                        Console.WriteLine("Congratulations, Crosses has won!!");
+                        Console.ReadKey();
+                    }
+                    else if (turnNumber >= 9)
+                    {
+                        won = true;
+                        Console.BackgroundColor = ConsoleColor.Magenta;
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Clear();
+                        DisplayBoard();
+                        Console.WriteLine("There has been a draw, Play again");
+                        Console.ReadKey();
+                    }
                 }
                 else if (turnNumber % 2 == 1)
                 {
@@ -42,6 +63,27 @@ namespace NaughtsAndCrosses
                     char x = Convert.ToChar(input.Substring(0, 1));
                     char y = Convert.ToChar(input.Substring(1, 1));
                     AddToBoard(x, y, 'O');
+
+                    if (HasWon('O'))
+                    {
+                        won = true;
+                        Console.BackgroundColor = ConsoleColor.Magenta;
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Clear();
+                        DisplayBoard();
+                        Console.WriteLine("Congratulations, Naughts has won!!");
+                        Console.ReadKey();
+                    }
+                    else if (turnNumber >= 9)
+                    {
+                        won = true;
+                        Console.BackgroundColor = ConsoleColor.Magenta;
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Clear();
+                        DisplayBoard();
+                        Console.WriteLine("There has been a draw, Play again");
+                        Console.ReadKey();
+                    }
                 }
                 turnNumber++;
             } while (won == false);
@@ -71,18 +113,26 @@ namespace NaughtsAndCrosses
 
         public static bool HasWon(char _player)
         {
+            _player = Char.ToUpper(_player);
             if (A1 == _player)
             {
                 if (A2 == _player && A3 == _player) { return true; }
                 if (B2 == _player && C3 == _player) { return true; }
                 if (B1 == _player && C1 == _player) { return true; }
             }
-            if (A1 == _player)
+            if (B1 == _player)
             {
-                if (A2 == _player && A3 == _player) { return true; }
-                if (B2 == _player && C3 == _player) { return true; }
-                if (B1 == _player && C1 == _player) { return true; }
+                if (B2 == _player && B3 == _player) { return true; }
             }
+            if (C1 == _player)
+            {
+                if (C2 == _player && C3 == _player) { return true; }
+                if (B2 == _player && A3 == _player) { return true; }
+            }
+            if (A2 == _player && B2 == _player && C2 == _player) { return true; }
+            if (A3 == _player && B3 == _player && C3 == _player) { return true; }
+
+            return false;
         }
 
         public static void AddToBoard(char _x, char _y, char _player)
