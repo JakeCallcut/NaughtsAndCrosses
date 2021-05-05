@@ -1,0 +1,13 @@
+E:\NaughtsAndCrosses\NaughtsAndCrosses\bin\Debug\NaughtsAndCrosses.exe.config
+E:\NaughtsAndCrosses\NaughtsAndCrosses\bin\Debug\NaughtsAndCrosses.exe
+E:\NaughtsAndCrosses\NaughtsAndCrosses\bin\Debug\NaughtsAndCrosses.pdb
+E:\NaughtsAndCrosses\NaughtsAndCrosses\obj\Debug\NaughtsAndCrosses.csprojAssemblyReference.cache
+E:\NaughtsAndCrosses\NaughtsAndCrosses\obj\Debug\NaughtsAndCrosses.exe
+E:\NaughtsAndCrosses\NaughtsAndCrosses\obj\Debug\NaughtsAndCrosses.pdb
+F:\Github repos\NaughtsAndCrosses\NaughtsAndCrosses\bin\Debug\NaughtsAndCrosses.exe.config
+F:\Github repos\NaughtsAndCrosses\NaughtsAndCrosses\bin\Debug\NaughtsAndCrosses.exe
+F:\Github repos\NaughtsAndCrosses\NaughtsAndCrosses\bin\Debug\NaughtsAndCrosses.pdb
+F:\Github repos\NaughtsAndCrosses\NaughtsAndCrosses\obj\Debug\NaughtsAndCrosses.csprojAssemblyReference.cache
+F:\Github repos\NaughtsAndCrosses\NaughtsAndCrosses\obj\Debug\NaughtsAndCrosses.csproj.CoreCompileInputs.cache
+F:\Github repos\NaughtsAndCrosses\NaughtsAndCrosses\obj\Debug\NaughtsAndCrosses.exe
+F:\Github repos\NaughtsAndCrosses\NaughtsAndCrosses\obj\Debug\NaughtsAndCrosses.pdb
