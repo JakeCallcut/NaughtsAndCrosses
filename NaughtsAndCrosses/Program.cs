@@ -13,6 +13,9 @@ namespace NaughtsAndCrosses
             Console.Title = "Naughts & Crosses";
             Console.BackgroundColor = ConsoleColor.DarkGray;
             Console.ForegroundColor = ConsoleColor.Black;
+            Console.SetWindowSize(65, 12);
+            Console.LargestWindowHeight() = 65;
+
             int turnNumber = 0;
             string input;
             bool won = false;
@@ -24,7 +27,7 @@ namespace NaughtsAndCrosses
                     Console.WriteLine("Crosses turn");
                     DisplayBoard();
                     Console.WriteLine(" ");
-                    Console.WriteLine("Please enter the coordinate where you would like to put your mark (e.g A1)");
+                    Console.WriteLine("Please enter where you would like to put your mark (e.g A1)");
                     input = Console.ReadLine();
 
                     char x = Convert.ToChar(input.Substring(0, 1));
