@@ -69,13 +69,21 @@ namespace NaughtsAndCrosses
         public static char C2 = ' ';
         public static char C3 = ' ';
 
-        //public static bool WinCheck(char _player)
-        //{
-        //    if (_player == 'X')
-        //    {
-        //        if (A1 == ) { }
-        //    }
-        //}
+        public static bool HasWon(char _player)
+        {
+            if (A1 == _player)
+            {
+                if (A2 == _player && A3 == _player) { return true; }
+                if (B2 == _player && C3 == _player) { return true; }
+                if (B1 == _player && C1 == _player) { return true; }
+            }
+            if (A1 == _player)
+            {
+                if (A2 == _player && A3 == _player) { return true; }
+                if (B2 == _player && C3 == _player) { return true; }
+                if (B1 == _player && C1 == _player) { return true; }
+            }
+        }
 
         public static void AddToBoard(char _x, char _y, char _player)
         {
