@@ -14,7 +14,6 @@ namespace NaughtsAndCrosses
             Console.BackgroundColor = ConsoleColor.DarkGray;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.SetWindowSize(65, 12);
-            Console.LargestWindowHeight() = 65;
 
             int turnNumber = 0;
             string input;
@@ -32,6 +31,7 @@ namespace NaughtsAndCrosses
 
                     char x = Convert.ToChar(input.Substring(0, 1));
                     char y = Convert.ToChar(input.Substring(1, 1));
+
                     AddToBoard(x, y, 'X');
 
                     if (HasWon('X'))
@@ -104,13 +104,36 @@ namespace NaughtsAndCrosses
         public static char C2 = ' ';
         public static char C3 = ' ';
 
+        public static bool IsAvailable(char _x, char _y)
+        {
+            if (Char.ToUpper(_x) == 'A')
+            {
+                if (_y == '1') { if (A1 == ' ') { return true; } else { return false; } }
+                if (_y == '2') { if (A2 == ' ') { return true; } else { return false; } }
+                if (_y == '3') { if (A3 == ' ') { return true; } else { return false; } }
+            }
+            else if (Char.ToUpper(_x) == 'B')
+            {
+                if (_y == '1') { if (B1 == ' ') { return true; } else { return false; } }
+                if (_y == '2') { if (B2 == ' ') { return true; } else { return false; } }
+                if (_y == '3') { if (B3 == ' ') { return true; } else { return false; } }
+            }
+            else if (Char.ToUpper(_x) == 'C')
+            {
+                if (_y == '1') { if (C1 == ' ') { return true; } else { return false; } }
+                if (_y == '2') { if (C2 == ' ') { return true; } else { return false; } }
+                if (_y == '3') { if (C3 == ' ') { return true; } else { return false; } }
+            }
+            return false;
+        }
+
         public static void DisplayBoard()
         {
             Console.WriteLine(" |A|B|C|");
             Console.WriteLine("1|{0}|{1}|{2}|", A1, B1, C1);
-            Console.WriteLine("=|=|=|=|");
+            Console.WriteLine("-+-+-+-+");
             Console.WriteLine("2|{0}|{1}|{2}|", A2, B2, C2);
-            Console.WriteLine("=|=|=|=|");
+            Console.WriteLine("-+-+-+-+");
             Console.WriteLine("3|{0}|{1}|{2}|", A3, B3, C3);
         }
 
